@@ -4,7 +4,7 @@ import os.path
 
 HERE = os.path.dirname(__file__)
 
-with open(os.path.join(HERE, 'README')) as f:
+with open(os.path.join(HERE, 'README.rst')) as f:
     ldesc = f.read()
 
 setup(
