@@ -14,6 +14,10 @@ when using the command-line nova client).
 
 Quick Start
 -----------
+- Install the plugin::
+
+    pip install novaclient-auth-secretkey
+
 - Set your environment variables in your shell::
 
     # this plugin uses these values:
