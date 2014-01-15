@@ -9,7 +9,7 @@ with open(os.path.join(HERE, 'README.rst')) as f:
 
 setup(
         name='novaclient-auth-secretkey',
-        version='0.1',
+        version='0.2',
         author='fr33jc',
         author_email='fr33jc@gmail.com',
         packages=['novaclient_secretkey'],
@@ -24,5 +24,8 @@ setup(
             'openstack.client.authenticate': [
                 'secretkey = novaclient_secretkey.auth_plugin:secretkey',
                 ],
-            },
+            'openstack.client.auth_plugin': [
+                'secretkey = novaclient_secretkey.auth_plugin:SecretKeyAuthPlugin',
+                ]
+            }
         )

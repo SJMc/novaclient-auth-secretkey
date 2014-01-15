@@ -21,7 +21,7 @@ Quick Start
 - Set your environment variables in your shell::
 
     # this plugin uses these values:
-    export OS_AUTH_SYSTEM="secretkey
+    export OS_AUTH_SYSTEM="secretkey"
     export OS_ACCESS_KEY_ID="FIBVLEKFOSIFJS68FI8L"
     export OS_SECRET_KEY="Mu8E/fsleibv8f2j7G97pzqKusive8ofieFkeNs1"
 

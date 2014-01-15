@@ -3,6 +3,7 @@ Authentication plugin for python-novaclient.  Enables using API key+secret key
 credentials instead of username+password.
 """
 import os
+import novaclient.auth_plugin
 
 
 def secretkey(httpclient, url):
@@ -30,3 +31,8 @@ def secretkey(httpclient, url):
     if httpclient.projectid:
         body['auth']['tenantName'] = httpclient.projectid
     httpclient._authenticate(url, body)
+
+class SecretKeyAuthPlugin(novaclient.auth_plugin.BaseAuthPlugin):
+    '''Authentication only'''
+    def authenticate(self, cls, auth_url):
+        secretkey(cls, auth_url)
